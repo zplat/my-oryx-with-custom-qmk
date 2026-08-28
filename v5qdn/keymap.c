@@ -26,8 +26,8 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(1, KC_J)
-#define DUAL_FUNC_1 LT(11, KC_T)
+#define DUAL_FUNC_0 LT(5, KC_O)
+#define DUAL_FUNC_1 LT(9, KC_F21)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_Q,           KC_Y,           KC_O,           KC_U,           KC_J,                                           KC_K,           KC_D,           KC_L,           KC_C,           KC_W,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_P,           KC_N,           KC_I,           KC_A,           KC_SCLN,                                        KC_M,           KC_H,           KC_T,           KC_S,           KC_R,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_COMMA,       KC_LPRN,        KC_DOT,         KC_RPRN,        KC_SLASH,                                       KC_B,           KC_F,           KC_G,           KC_V,           KC_X,           KC_TRANSPARENT, 
-                                                    TT(1),          LT(4, KC_SPACE),                                KC_E,           TT(2)
+                                                    OSL(1),         LT(4, KC_SPACE),                                KC_E,           OSL(1)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -96,38 +96,36 @@ const uint16_t PROGMEM combo3[] = { KC_H, KC_T, KC_S, COMBO_END};
 const uint16_t PROGMEM combo4[] = { KC_H, KC_T, COMBO_END};
 const uint16_t PROGMEM combo5[] = { KC_C, KC_L, COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_N, KC_I, LT(4, KC_SPACE), COMBO_END};
-const uint16_t PROGMEM combo7[] = { KC_N, KC_I, TT(1), COMBO_END};
-const uint16_t PROGMEM combo8[] = { KC_T, KC_S, KC_E, COMBO_END};
-const uint16_t PROGMEM combo9[] = { KC_S, KC_T, TT(2), COMBO_END};
-const uint16_t PROGMEM combo10[] = { KC_LPRN, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM combo11[] = { KC_V, KC_F, COMBO_END};
-const uint16_t PROGMEM combo12[] = { KC_D, KC_L, COMBO_END};
-const uint16_t PROGMEM combo13[] = { KC_C, KC_L, KC_D, COMBO_END};
-const uint16_t PROGMEM combo14[] = { KC_V, KC_G, COMBO_END};
-const uint16_t PROGMEM combo15[] = { KC_N, KC_I, KC_A, COMBO_END};
-const uint16_t PROGMEM combo16[] = { KC_I, KC_A, COMBO_END};
-const uint16_t PROGMEM combo17[] = { KC_H, KC_E, COMBO_END};
-const uint16_t PROGMEM combo18[] = { KC_C, KC_E, COMBO_END};
-const uint16_t PROGMEM combo19[] = { KC_L, KC_E, COMBO_END};
-const uint16_t PROGMEM combo20[] = { KC_D, KC_E, COMBO_END};
-const uint16_t PROGMEM combo21[] = { LT(4, KC_SPACE), KC_U, COMBO_END};
-const uint16_t PROGMEM combo22[] = { KC_O, LT(4, KC_SPACE), COMBO_END};
-const uint16_t PROGMEM combo23[] = { LT(4, KC_SPACE), KC_Y, COMBO_END};
-const uint16_t PROGMEM combo24[] = { LT(4, KC_SPACE), KC_Q, COMBO_END};
-const uint16_t PROGMEM combo25[] = { KC_A, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM combo26[] = { KC_F, KC_G, KC_V, COMBO_END};
-const uint16_t PROGMEM combo27[] = { KC_Q, KC_Y, KC_O, COMBO_END};
-const uint16_t PROGMEM combo28[] = { KC_W, KC_C, KC_L, COMBO_END};
-const uint16_t PROGMEM combo29[] = { KC_K, KC_M, COMBO_END};
-const uint16_t PROGMEM combo30[] = { KC_O, KC_I, COMBO_END};
-const uint16_t PROGMEM combo31[] = { KC_U, KC_A, COMBO_END};
-const uint16_t PROGMEM combo32[] = { KC_L, KC_T, COMBO_END};
-const uint16_t PROGMEM combo33[] = { KC_D, KC_H, COMBO_END};
-const uint16_t PROGMEM combo34[] = { KC_H, KC_T, KC_S, KC_R, COMBO_END};
-const uint16_t PROGMEM combo35[] = { KC_LPRN, KC_DOT, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM combo36[] = { KC_RPRN, KC_A, COMBO_END};
-const uint16_t PROGMEM combo37[] = { KC_SLASH, KC_B, COMBO_END};
-const uint16_t PROGMEM combo38[] = { KC_DOT, KC_SLASH, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM combo7[] = { KC_T, KC_S, KC_E, COMBO_END};
+const uint16_t PROGMEM combo8[] = { KC_LPRN, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM combo9[] = { KC_V, KC_F, COMBO_END};
+const uint16_t PROGMEM combo10[] = { KC_D, KC_L, COMBO_END};
+const uint16_t PROGMEM combo11[] = { KC_C, KC_L, KC_D, COMBO_END};
+const uint16_t PROGMEM combo12[] = { KC_V, KC_G, COMBO_END};
+const uint16_t PROGMEM combo13[] = { KC_N, KC_I, KC_A, COMBO_END};
+const uint16_t PROGMEM combo14[] = { KC_I, KC_A, COMBO_END};
+const uint16_t PROGMEM combo15[] = { KC_H, KC_E, COMBO_END};
+const uint16_t PROGMEM combo16[] = { KC_C, KC_E, COMBO_END};
+const uint16_t PROGMEM combo17[] = { KC_L, KC_E, COMBO_END};
+const uint16_t PROGMEM combo18[] = { KC_D, KC_E, COMBO_END};
+const uint16_t PROGMEM combo19[] = { LT(4, KC_SPACE), KC_U, COMBO_END};
+const uint16_t PROGMEM combo20[] = { KC_O, LT(4, KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo21[] = { LT(4, KC_SPACE), KC_Y, COMBO_END};
+const uint16_t PROGMEM combo22[] = { LT(4, KC_SPACE), KC_Q, COMBO_END};
+const uint16_t PROGMEM combo23[] = { KC_A, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM combo24[] = { KC_F, KC_G, KC_V, COMBO_END};
+const uint16_t PROGMEM combo25[] = { KC_Q, KC_Y, KC_O, COMBO_END};
+const uint16_t PROGMEM combo26[] = { KC_W, KC_C, KC_L, COMBO_END};
+const uint16_t PROGMEM combo27[] = { KC_K, KC_M, COMBO_END};
+const uint16_t PROGMEM combo28[] = { KC_O, KC_I, COMBO_END};
+const uint16_t PROGMEM combo29[] = { KC_U, KC_A, COMBO_END};
+const uint16_t PROGMEM combo30[] = { KC_L, KC_T, COMBO_END};
+const uint16_t PROGMEM combo31[] = { KC_D, KC_H, COMBO_END};
+const uint16_t PROGMEM combo32[] = { KC_H, KC_T, KC_S, KC_R, COMBO_END};
+const uint16_t PROGMEM combo33[] = { KC_LPRN, KC_DOT, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM combo34[] = { KC_RPRN, KC_A, COMBO_END};
+const uint16_t PROGMEM combo35[] = { KC_SLASH, KC_B, COMBO_END};
+const uint16_t PROGMEM combo36[] = { KC_DOT, KC_SLASH, KC_RPRN, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_Z),
@@ -137,38 +135,36 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo4, KC_COLN),
     COMBO(combo5, KC_BSPC),
     COMBO(combo6, KC_LEFT_CTRL),
-    COMBO(combo7, KC_LEFT_GUI),
-    COMBO(combo8, KC_RIGHT_CTRL),
-    COMBO(combo9, KC_RIGHT_GUI),
-    COMBO(combo10, KC_LEFT_ALT),
-    COMBO(combo11, KC_LEFT_ALT),
-    COMBO(combo12, KC_EQUAL),
-    COMBO(combo13, LCTL(KC_W)),
-    COMBO(combo14, KC_DLR),
-    COMBO(combo15, KC_TAB),
-    COMBO(combo16, KC_ESCAPE),
-    COMBO(combo17, KC_QUES),
-    COMBO(combo18, ST_MACRO_4),
-    COMBO(combo19, KC_AT),
-    COMBO(combo20, KC_HASH),
-    COMBO(combo21, KC_EXLM),
-    COMBO(combo22, KC_ASTR),
-    COMBO(combo23, KC_PLUS),
-    COMBO(combo24, ST_MACRO_5),
-    COMBO(combo25, KC_DELETE),
-    COMBO(combo26, TG(3)),
-    COMBO(combo27, OSL(5)),
-    COMBO(combo28, OSL(5)),
-    COMBO(combo29, LALT(LCTL(LSFT(KC_B)))),
-    COMBO(combo30, ST_MACRO_6),
-    COMBO(combo31, ST_MACRO_7),
-    COMBO(combo32, ST_MACRO_8),
-    COMBO(combo33, ST_MACRO_9),
-    COMBO(combo34, ST_MACRO_10),
-    COMBO(combo35, ST_MACRO_11),
-    COMBO(combo36, LSFT(KC_DOT)),
-    COMBO(combo37, KC_CAPS),
-    COMBO(combo38, OSL(6)),
+    COMBO(combo7, KC_RIGHT_CTRL),
+    COMBO(combo8, KC_LEFT_ALT),
+    COMBO(combo9, KC_LEFT_ALT),
+    COMBO(combo10, KC_EQUAL),
+    COMBO(combo11, LCTL(KC_W)),
+    COMBO(combo12, KC_DLR),
+    COMBO(combo13, KC_TAB),
+    COMBO(combo14, KC_ESCAPE),
+    COMBO(combo15, KC_QUES),
+    COMBO(combo16, ST_MACRO_4),
+    COMBO(combo17, KC_AT),
+    COMBO(combo18, KC_HASH),
+    COMBO(combo19, KC_EXLM),
+    COMBO(combo20, KC_ASTR),
+    COMBO(combo21, KC_PLUS),
+    COMBO(combo22, ST_MACRO_5),
+    COMBO(combo23, KC_DELETE),
+    COMBO(combo24, TG(3)),
+    COMBO(combo25, OSL(5)),
+    COMBO(combo26, OSL(5)),
+    COMBO(combo27, LALT(LCTL(LSFT(KC_B)))),
+    COMBO(combo28, ST_MACRO_6),
+    COMBO(combo29, ST_MACRO_7),
+    COMBO(combo30, ST_MACRO_8),
+    COMBO(combo31, ST_MACRO_9),
+    COMBO(combo32, ST_MACRO_10),
+    COMBO(combo33, ST_MACRO_11),
+    COMBO(combo34, LSFT(KC_DOT)),
+    COMBO(combo35, KC_CAPS),
+    COMBO(combo36, OSL(6)),
 };
 
 
