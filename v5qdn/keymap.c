@@ -22,12 +22,16 @@ enum custom_keycodes {
   ST_MACRO_9,
   ST_MACRO_10,
   ST_MACRO_11,
+  ST_MACRO_12,
+  ST_MACRO_13,
+  ST_MACRO_14,
+  ST_MACRO_15,
 };
 
 
 
-#define DUAL_FUNC_0 LT(7, KC_8)
-#define DUAL_FUNC_1 LT(14, KC_9)
+#define DUAL_FUNC_0 LT(14, KC_G)
+#define DUAL_FUNC_1 LT(13, KC_L)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -126,6 +130,11 @@ const uint16_t PROGMEM combo33[] = { KC_LPRN, KC_DOT, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM combo34[] = { KC_RPRN, KC_A, COMBO_END};
 const uint16_t PROGMEM combo35[] = { KC_SLASH, KC_B, COMBO_END};
 const uint16_t PROGMEM combo36[] = { KC_DOT, KC_SLASH, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM combo37[] = { KC_A, LT(4, KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo38[] = { KC_ASTR, KC_EXLM, COMBO_END};
+const uint16_t PROGMEM combo39[] = { KC_RCBR, KC_MINUS, COMBO_END};
+const uint16_t PROGMEM combo40[] = { KC_QUES, KC_LBRC, COMBO_END};
+const uint16_t PROGMEM combo41[] = { KC_AT, KC_HASH, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_Z),
@@ -165,6 +174,11 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo34, LSFT(KC_DOT)),
     COMBO(combo35, KC_CAPS),
     COMBO(combo36, OSL(6)),
+    COMBO(combo37, KC_MINUS),
+    COMBO(combo38, ST_MACRO_12),
+    COMBO(combo39, ST_MACRO_13),
+    COMBO(combo40, ST_MACRO_14),
+    COMBO(combo41, ST_MACRO_15),
 };
 
 
@@ -249,6 +263,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_11:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL(SS_TAP(X_W))SS_DELAY(100)  SS_TAP(X_Q)SS_DELAY(100)  SS_TAP(X_ESCAPE)SS_DELAY(100)  SS_LSFT(SS_TAP(X_SCLN))SS_DELAY(100)  SS_TAP(X_Q)SS_DELAY(100)  SS_TAP(X_ENTER));
+    }
+    break;
+    case ST_MACRO_12:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_Q))SS_DELAY(100)  SS_TAP(X_U));
+    }
+    break;
+    case ST_MACRO_13:
+    if (record->event.pressed) {
+      SEND_STRING(SS_TAP(X_Q)SS_DELAY(100)  SS_TAP(X_U));
+    }
+    break;
+    case ST_MACRO_14:
+    if (record->event.pressed) {
+      SEND_STRING(SS_TAP(X_S)SS_DELAY(100)  SS_TAP(X_C));
+    }
+    break;
+    case ST_MACRO_15:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_S))SS_DELAY(100)  SS_TAP(X_C));
     }
     break;
 
