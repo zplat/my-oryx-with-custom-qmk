@@ -31,8 +31,8 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(1, KC_0)
-#define DUAL_FUNC_1 LT(2, KC_F12)
+#define DUAL_FUNC_0 LT(12, KC_F18)
+#define DUAL_FUNC_1 LT(11, KC_F7)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -116,27 +116,27 @@ const uint16_t PROGMEM combo18[] = { KC_O, LT(4, KC_SPACE), COMBO_END};
 const uint16_t PROGMEM combo19[] = { LT(4, KC_SPACE), KC_Y, COMBO_END};
 const uint16_t PROGMEM combo20[] = { LT(4, KC_SPACE), KC_Q, COMBO_END};
 const uint16_t PROGMEM combo21[] = { KC_A, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM combo22[] = { KC_F, KC_G, KC_V, COMBO_END};
-const uint16_t PROGMEM combo23[] = { KC_Q, KC_Y, KC_O, COMBO_END};
-const uint16_t PROGMEM combo24[] = { KC_W, KC_C, KC_L, COMBO_END};
-const uint16_t PROGMEM combo25[] = { KC_K, KC_M, COMBO_END};
-const uint16_t PROGMEM combo26[] = { KC_O, KC_I, COMBO_END};
-const uint16_t PROGMEM combo27[] = { KC_U, KC_A, COMBO_END};
-const uint16_t PROGMEM combo28[] = { KC_L, KC_T, COMBO_END};
-const uint16_t PROGMEM combo29[] = { KC_D, KC_H, COMBO_END};
-const uint16_t PROGMEM combo30[] = { KC_H, KC_T, KC_S, KC_R, COMBO_END};
-const uint16_t PROGMEM combo31[] = { KC_LPRN, KC_DOT, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM combo32[] = { KC_RPRN, KC_A, COMBO_END};
-const uint16_t PROGMEM combo33[] = { KC_SLASH, KC_B, COMBO_END};
-const uint16_t PROGMEM combo34[] = { KC_A, LT(4, KC_SPACE), COMBO_END};
-const uint16_t PROGMEM combo35[] = { KC_ASTR, KC_EXLM, COMBO_END};
-const uint16_t PROGMEM combo36[] = { KC_RCBR, KC_MINUS, COMBO_END};
-const uint16_t PROGMEM combo37[] = { KC_QUES, KC_LBRC, COMBO_END};
-const uint16_t PROGMEM combo38[] = { KC_AT, KC_HASH, COMBO_END};
-const uint16_t PROGMEM combo39[] = { KC_N, KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo40[] = { KC_S, KC_G, COMBO_END};
-const uint16_t PROGMEM combo41[] = { KC_I, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM combo42[] = { KC_F, KC_T, COMBO_END};
+const uint16_t PROGMEM combo22[] = { KC_K, KC_M, COMBO_END};
+const uint16_t PROGMEM combo23[] = { KC_O, KC_I, COMBO_END};
+const uint16_t PROGMEM combo24[] = { KC_U, KC_A, COMBO_END};
+const uint16_t PROGMEM combo25[] = { KC_L, KC_T, COMBO_END};
+const uint16_t PROGMEM combo26[] = { KC_D, KC_H, COMBO_END};
+const uint16_t PROGMEM combo27[] = { KC_H, KC_T, KC_S, KC_R, COMBO_END};
+const uint16_t PROGMEM combo28[] = { KC_LPRN, KC_DOT, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM combo29[] = { KC_RPRN, KC_A, COMBO_END};
+const uint16_t PROGMEM combo30[] = { KC_SLASH, KC_B, COMBO_END};
+const uint16_t PROGMEM combo31[] = { KC_A, LT(4, KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo32[] = { KC_ASTR, KC_EXLM, COMBO_END};
+const uint16_t PROGMEM combo33[] = { KC_RCBR, KC_MINUS, COMBO_END};
+const uint16_t PROGMEM combo34[] = { KC_QUES, KC_LBRC, COMBO_END};
+const uint16_t PROGMEM combo35[] = { KC_AT, KC_HASH, COMBO_END};
+const uint16_t PROGMEM combo36[] = { KC_N, KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo37[] = { KC_S, KC_G, COMBO_END};
+const uint16_t PROGMEM combo38[] = { KC_I, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM combo39[] = { KC_F, KC_T, COMBO_END};
+const uint16_t PROGMEM combo40[] = { KC_F, KC_G, KC_V, COMBO_END};
+const uint16_t PROGMEM combo41[] = { KC_R, KC_X, COMBO_END};
+const uint16_t PROGMEM combo42[] = { KC_COMMA, KC_P, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_Z),
@@ -161,31 +161,86 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo19, KC_PLUS),
     COMBO(combo20, ST_MACRO_6),
     COMBO(combo21, KC_DELETE),
-    COMBO(combo22, TG(3)),
-    COMBO(combo23, OSL(5)),
-    COMBO(combo24, OSL(5)),
-    COMBO(combo25, LALT(LCTL(LSFT(KC_B)))),
-    COMBO(combo26, ST_MACRO_7),
-    COMBO(combo27, ST_MACRO_8),
-    COMBO(combo28, ST_MACRO_9),
-    COMBO(combo29, ST_MACRO_10),
-    COMBO(combo30, ST_MACRO_11),
-    COMBO(combo31, ST_MACRO_12),
-    COMBO(combo32, LSFT(KC_DOT)),
-    COMBO(combo33, KC_CAPS),
-    COMBO(combo34, KC_MINUS),
-    COMBO(combo35, ST_MACRO_13),
-    COMBO(combo36, ST_MACRO_14),
-    COMBO(combo37, ST_MACRO_15),
-    COMBO(combo38, ST_MACRO_16),
-    COMBO(combo39, KC_LEFT_CTRL),
-    COMBO(combo40, KC_RIGHT_CTRL),
-    COMBO(combo41, KC_LEFT_GUI),
-    COMBO(combo42, KC_RIGHT_GUI),
+    COMBO(combo22, LALT(LCTL(LSFT(KC_B)))),
+    COMBO(combo23, ST_MACRO_7),
+    COMBO(combo24, ST_MACRO_8),
+    COMBO(combo25, ST_MACRO_9),
+    COMBO(combo26, ST_MACRO_10),
+    COMBO(combo27, ST_MACRO_11),
+    COMBO(combo28, ST_MACRO_12),
+    COMBO(combo29, LSFT(KC_DOT)),
+    COMBO(combo30, KC_CAPS),
+    COMBO(combo31, KC_MINUS),
+    COMBO(combo32, ST_MACRO_13),
+    COMBO(combo33, ST_MACRO_14),
+    COMBO(combo34, ST_MACRO_15),
+    COMBO(combo35, ST_MACRO_16),
+    COMBO(combo36, KC_LEFT_CTRL),
+    COMBO(combo37, KC_RIGHT_CTRL),
+    COMBO(combo38, KC_LEFT_GUI),
+    COMBO(combo39, KC_RIGHT_GUI),
+    COMBO(combo40, TG(3)),
+    COMBO(combo41, OSL(6)),
+    COMBO(combo42, OSL(5)),
 };
 
 
 
+extern rgb_config_t rgb_matrix_config;
+
+RGB hsv_to_rgb_with_value(HSV hsv) {
+  RGB rgb = hsv_to_rgb( hsv );
+  float f = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+  return (RGB){ f * rgb.r, f * rgb.g, f * rgb.b };
+}
+
+void keyboard_post_init_user(void) {
+  rgb_matrix_enable();
+}
+
+const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
+    [6] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,218,204}, {139,178,97}, {194,218,204}, {243,218,204}, {0,0,0}, {0,0,0}, {36,218,204}, {0,0,0}, {161,218,204}, {4,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {243,218,204}, {194,218,204}, {139,178,97}, {31,218,204}, {0,0,0}, {0,0,0}, {4,218,204}, {161,218,204}, {0,0,0}, {36,218,204}, {0,0,0}, {0,0,0}, {0,0,0} },
+
+};
+
+void set_layer_color(int layer) {
+  for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+    HSV hsv = {
+      .h = pgm_read_byte(&ledmap[layer][i][0]),
+      .s = pgm_read_byte(&ledmap[layer][i][1]),
+      .v = pgm_read_byte(&ledmap[layer][i][2]),
+    };
+    if (!hsv.h && !hsv.s && !hsv.v) {
+        rgb_matrix_set_color( i, 0, 0, 0 );
+    } else {
+        RGB rgb = hsv_to_rgb_with_value(hsv);
+        rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
+    }
+  }
+}
+
+bool rgb_matrix_indicators_user(void) {
+  if (rawhid_state.rgb_control) {
+      return false;
+  }
+  if (!keyboard_config.disable_layer_led) { 
+    switch (biton32(layer_state)) {
+      case 6:
+        set_layer_color(6);
+        break;
+     default:
+        if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
+          rgb_matrix_set_color_all(0, 0, 0);
+        }
+    }
+  } else {
+    if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
+      rgb_matrix_set_color_all(0, 0, 0);
+    }
+  }
+
+  return true;
+}
 
 
 
