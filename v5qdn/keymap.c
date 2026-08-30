@@ -31,8 +31,8 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(14, KC_9)
-#define DUAL_FUNC_1 LT(10, KC_3)
+#define DUAL_FUNC_0 LT(1, KC_Y)
+#define DUAL_FUNC_1 LT(9, KC_F18)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -40,20 +40,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_Q,           KC_Y,           KC_O,           KC_U,           KC_J,                                           KC_K,           KC_D,           KC_L,           KC_C,           KC_W,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_P,           KC_N,           KC_I,           KC_A,           KC_SCLN,                                        KC_M,           KC_H,           KC_T,           KC_S,           KC_R,           KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_COMMA,       KC_LPRN,        KC_DOT,         KC_RPRN,        KC_SLASH,                                       KC_B,           KC_F,           KC_G,           KC_V,           KC_X,           KC_TRANSPARENT, 
-                                                    OSL(1),         LT(4, KC_SPACE),                                KC_E,           OSL(2)
+                                                    OSL(2),         LT(4, KC_SPACE),                                KC_E,           OSL(1)
   ),
   [1] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_0,     KC_PLUS,        KC_ASTR,        KC_EXLM,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_HASH,        KC_AT,          ST_MACRO_1,     KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_PIPE,        KC_LCBR,        KC_RCBR,        KC_MINUS,       KC_BSLS,                                        ST_MACRO_2,     KC_QUES,        KC_LBRC,        KC_RBRC,        KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_LABK,        KC_RABK,        KC_PERC,        KC_SLASH,                                       KC_TRANSPARENT, KC_AMPR,        KC_LPRN,        KC_RPRN,        KC_UNDS,        KC_TRANSPARENT, 
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
-  ),
-  [2] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     RALT(KC_5),     KC_EQUAL,       KC_PLUS,        KC_MINUS,       KC_ASTR,        KC_BSPC,                                        KC_ENTER,       KC_D,           KC_L,           KC_C,           KC_W,           KC_TRANSPARENT, 
     RALT(RSFT(KC_4)),KC_6,           KC_4,           KC_0,           KC_2,           KC_J,                                           KC_K,           KC_3,           KC_1,           KC_5,           KC_7,           KC_TRANSPARENT, 
     RALT(KC_MINUS), KC_LABK,        KC_RABK,        KC_DOT,         KC_8,           KC_SLASH,                                       KC_B,           KC_9,           LSFT(KC_G),     KC_LPRN,        KC_RPRN,        KC_TRANSPARENT, 
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+  ),
+  [2] = LAYOUT_voyager(
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, ST_MACRO_0,     KC_PLUS,        KC_ASTR,        KC_EXLM,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_HASH,        KC_AT,          ST_MACRO_1,     KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_PIPE,        KC_LCBR,        KC_RCBR,        KC_MINUS,       KC_BSLS,                                        ST_MACRO_2,     KC_QUES,        KC_LBRC,        KC_RBRC,        KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_LABK,        KC_RABK,        KC_PERC,        KC_SLASH,                                       KC_TRANSPARENT, KC_AMPR,        KC_LPRN,        KC_RPRN,        KC_UNDS,        KC_TRANSPARENT, 
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT_voyager(
