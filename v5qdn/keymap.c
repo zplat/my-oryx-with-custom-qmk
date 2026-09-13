@@ -28,8 +28,8 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(9, KC_F22)
-#define DUAL_FUNC_1 LT(15, KC_F15)
+#define DUAL_FUNC_0 LT(13, KC_X)
+#define DUAL_FUNC_1 LT(1, KC_F10)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LCTL(LSFT(KC_F8)),LCTL(LSFT(KC_F9)),KC_TRANSPARENT,                                 KC_F1,          KC_F2,          KC_F10,         KC_F11,         KC_F12,         KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_F5,          DUAL_FUNC_0,    DUAL_FUNC_1,    KC_TRANSPARENT,                                 KC_GRAVE,       KC_DQUO,        KC_QUOTE,       KC_CIRC,        KC_TILD,        KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LCTL(KC_F8),    LCTL(KC_F9),    KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, LCTL(KC_F8),    LCTL(KC_F9),    KC_TRANSPARENT,                                 LALT(LCTL(LSFT(KC_SLASH))),RALT(KC_1),     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [7] = LAYOUT_voyager(
@@ -132,6 +132,7 @@ const uint16_t PROGMEM combo37[] = { KC_F, KC_T, COMBO_END};
 const uint16_t PROGMEM combo38[] = { KC_F, KC_G, KC_V, COMBO_END};
 const uint16_t PROGMEM combo39[] = { KC_R, KC_X, COMBO_END};
 const uint16_t PROGMEM combo40[] = { KC_COMMA, KC_P, COMBO_END};
+const uint16_t PROGMEM combo41[] = { KC_Y, KC_O, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_Z),
@@ -175,6 +176,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo38, TG(4)),
     COMBO(combo39, OSL(3)),
     COMBO(combo40, OSL(6)),
+    COMBO(combo41, KC_Q),
 };
 
 
