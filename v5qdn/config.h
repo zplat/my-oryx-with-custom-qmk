@@ -1,9 +1,9 @@
 #define FLOW_TAP_TERM 100
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define AUTO_SHIFT_TIMEOUT 140
-#define SERIAL_NUMBER "v5qdn/MaeZNr"
+#define SERIAL_NUMBER "v5qdn/m57zlq"
 #define LAYER_STATE_16BIT
-#define COMBO_COUNT 42
+#define COMBO_COUNT 47
 
 #define RGB_MATRIX_STARTUP_SPD 60
 
